@@ -23,6 +23,8 @@ declare global {
     guest: Guest;
     rooms: Room[];
   }
+
+  export type ToggleValue = '-' | '+';
 }
 
 export {};

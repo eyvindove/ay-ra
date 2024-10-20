@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
+  src: './_fonts/GeistMonoVF.woff',
   variable: '--font-geist-mono',
   weight: '100 900',
 });
