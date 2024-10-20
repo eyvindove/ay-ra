@@ -20,8 +20,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@layer components {
+}
+
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
