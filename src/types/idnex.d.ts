@@ -25,6 +25,12 @@ declare global {
   }
 
   export type ToggleValue = '-' | '+';
+
+  export interface Result {
+    adult: number;
+    child: number;
+    price: number;
+  }
 }
 
 export {};

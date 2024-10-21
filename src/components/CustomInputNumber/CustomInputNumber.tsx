@@ -1,6 +1,6 @@
 'use-client';
 
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import CustomInputButton from './components/CustomInputButton/CustomInputButton';
 
@@ -29,6 +29,10 @@ export default function CustomInputNumber({
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const [inputValue, setInputValue] = useState(value);
+
+  useEffect(() => {
+    setInputValue(value);
+  }, [value]);
 
   function handleClickMinus() {
     const tempValue = inputValue - step;
@@ -83,7 +87,7 @@ export default function CustomInputNumber({
     >
       <CustomInputButton
         text='-'
-        disabled={disabled || value <= min}
+        disabled={disabled || inputValue <= min}
         onClick={handleClickMinus}
       />
       <input
@@ -102,7 +106,7 @@ export default function CustomInputNumber({
 
       <CustomInputButton
         text='+'
-        disabled={disabled || value >= max}
+        disabled={disabled || inputValue >= max}
         onClick={handleClickAdd}
       />
     </div>

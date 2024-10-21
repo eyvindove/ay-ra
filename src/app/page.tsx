@@ -3,7 +3,6 @@ import RoomAllocationContainer from './_components/RoomAllocationContainer/RoomA
 export default function Home() {
   return (
     <main className='font-[family-name:var(--font-geist-mono)]'>
-      AY-RA
       <RoomAllocationContainer />
     </main>
   );
