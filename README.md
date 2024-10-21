@@ -1,3 +1,13 @@
+# AY-RA
+
+## Test case
+
+Please toggle `activeTestCase` in test case config file to display results. (file path: src/config/test-case.ts)
+
+[Live Demo](https://ay-ra-eyvindove.vercel.app/)
+
+--
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
