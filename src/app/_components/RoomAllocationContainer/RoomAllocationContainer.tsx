@@ -9,8 +9,8 @@ export default function RoomAllocationContainer() {
   const testCaseList = Array.from(new Array(3).keys());
   const [activeTestCase, setActiveTestCase] = useState(0);
 
-  const guest = testCase[activeTestCase].guest;
-  const rooms = testCase[activeTestCase].rooms;
+  const guest = testCase[activeTestCase].guest ?? { adult: 0, child: 0 };
+  const rooms = testCase[activeTestCase].rooms ?? [];
 
   function handleOnChange(result: number) {
     console.log(`** TotalPrice: ${result}`);

@@ -157,12 +157,11 @@ export default function RoomAllocation({ guest, rooms, onChange }: Props) {
               <CustomInputNumber
                 name={`${index}-adult`}
                 value={room.adult}
-                max={
-                  Math.min(
-                    (rooms[index]?.capacity ?? 0) - room.child,
-                    room.adult + restGuest.adult,
-                  ) ?? 0
-                }
+                max={Math.min(
+                  rooms[index]?.capacity ?? 0,
+                  (rooms[index]?.capacity ?? 0) - room.child,
+                  room.adult + restGuest.adult,
+                )}
                 onChange={handleOnChange}
                 onBlur={handleOnBlur}
               />
@@ -174,8 +173,13 @@ export default function RoomAllocation({ guest, rooms, onChange }: Props) {
                 name={`${index}-child`}
                 value={room.child}
                 max={Math.min(
+                  rooms[index]?.capacity ?? 0,
                   (rooms[index]?.capacity ?? 0) - room.adult,
-                  room.child + Math.min(restGuest.adult, restGuest.child),
+                  Math.floor((rooms[index]?.capacity ?? 0) / 2),
+                  Math.min(
+                    room.adult + restGuest.adult,
+                    room.child + restGuest.child,
+                  ),
                 )}
                 onChange={handleOnChange}
                 onBlur={handleOnBlur}
