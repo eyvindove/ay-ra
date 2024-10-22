@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import RoomAllocation from '@/components/RoomAllocation/RoomAllocation';
+import RoomAllocation from '@/app/_components/RoomAllocation/RoomAllocation';
 import { testCase } from '@/config/test-case';
 
 export default function RoomAllocationContainer() {
